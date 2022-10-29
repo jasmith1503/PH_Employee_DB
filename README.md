@@ -11,7 +11,7 @@ Using the employee’s born between 1955 & 1952 (ages 67 and 70 respectively) wh
 
 Next these specific employees were identified using their current job title to better plan which departments have the highest rate of retirement coming. Using the below breakdown, the groups for Senior Engineer and Senior Staff (~60%) will need the most focus following by the remaining Engineers and Staff. 
 
-On Average each department has ~43% reduction in workforce. This allows for roughly 2 current employees to 1 retiring employee which can participate in the Mentorship program. 
+On average each department has ~43% reduction in workforce. This allows for roughly 2 current employees to 1 retiring employee which can participate in the Mentorship program. 
 
 ![Staff Title Distro](Resources/StaffTitleDistro.jpg)
 
