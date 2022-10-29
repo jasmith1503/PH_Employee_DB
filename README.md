@@ -6,6 +6,8 @@ Out of the 240,124 current employee’s within Pewlett-Hackard, an estimated 72,
 
 ![Job Title Breakdown](Resources/TitleBreakdown.jpg)
 
+![Remaining Titles](Resources/RemainingTitles.jpg)
+
 ## Analysis: 
 Using the employee’s born between 1955 & 1952 (ages 67 and 70 respectively) who are still employed at PH a list was created to better manage the number of employees which are most likely to retire. This loss in company knowledge can lead to a disruption in productivity and productivity across multiple fields. This list can be found in the file “retirement_titles.csv” 
 
