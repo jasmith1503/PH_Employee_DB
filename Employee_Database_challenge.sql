@@ -1,4 +1,5 @@
--- Create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955
+-- Create a Retirement Titles table for employees who are born between January 1, 1952 
+-- and December 31, 1955
 SELECT
 	e.emp_no, 
 	e.first_name, 
@@ -10,10 +11,13 @@ INTO retirement_titles
 FROM employees AS e
 INNER JOIN titles as t
 	ON (t.emp_no = e.emp_no)
-WHERE birth_date BETWEEN '1952-01-01' AND '1955-12-31'
+WHERE 
+	(birth_date BETWEEN '1952-01-01' AND '1955-12-31') 
+	AND (t.to_date = '9999-01-01')
 ORDER BY emp_no
 
--- Create a Unique Titles table that contains the employee number, first and last name, and most recent title
+-- Create a Unique Titles table that contains the employee number, first and last name, 
+-- and most recent title
 SELECT 
 	DISTINCT ON (rt.emp_no) 
 	rt.emp_no, 
@@ -26,7 +30,8 @@ INNER JOIN titles AS t
 	ON (t.emp_no = rt.emp_no)
 ORDER BY rt.emp_no, t.from_date DESC
 
--- Create a Retiring Titles table that contains the number of titles filled by employees who are retiring.
+-- Create a Retiring Titles table that contains the number of titles filled by employees 
+-- who are retiring.
 SELECT
 	COUNT(title), 
 	title
@@ -52,5 +57,6 @@ INNER JOIN dept_emp AS de
 	ON (de.emp_no = e.emp_no)
 INNER JOIN titles AS t
 	ON (t.emp_no = de.emp_no)
-WHERE e.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
+WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+	AND (t.to_date = '9999-01-01')
 ORDER BY e.emp_no, t.from_date DESC
